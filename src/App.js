@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import CsvComponent from './Components/CsvComponent'
+import { Grid, Segment,Container } from 'semantic-ui-react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    return (
+        <div style={{marginTop:'20px'}}>
+            <Container>
+                <Grid columns='equal'>
+                    <Grid.Row>
+                    <Grid.Column>
+                        <Segment><h1 style={{margin:'10px'}}>File Upload + CSV-parser</h1></Segment>
+                    </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+                
+                <CsvComponent/>
+
+            </Container>
+        </div>
+    )
 }
 
-export default App;
+export default App
